@@ -1,0 +1,15 @@
+{
+  "name": "engreen-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page da Engreen — engenharia civil sustentável",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/style.css --minify",
+    "serve": "npx --yes serve public"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* O Tailwind procura classes nestes arquivos */
+@source "../public/**/*.html";
+@source "../public/js/**/*.js";
+
+/* ===== Identidade visual Engreen ===== */
+@theme {
+  /* Paleta (uso: bg-escuro, text-lime, border-verde…) */
+  --color-escuro: #0b1e26;
+  --color-petroleo: #18333d;
+  --color-musgo: #487070;
+  --color-verde: #1c621b;
+  --color-lime: #a5ec60;
+  --color-offwhite: #f2f2f2;
+
+  /* Tipografia */
+  --font-sans: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ===== Fontes (Satoshi) ===== */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===== Base ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* compensa o header fixo ao clicar no menu */
+  }
+  body {
+    @apply bg-escuro font-sans font-light text-lg leading-relaxed text-offwhite antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-lime;
+  }
+}
+
+/* ===== Componentes reaproveitados (viram classes como "btn-primary") ===== */
+@utility container-site {
+  @apply mx-auto w-full max-w-7xl px-6;
+}
+@utility eyebrow {
+  @apply text-sm font-bold uppercase tracking-[0.12em];
+}
+@utility titulo-secao {
+  @apply text-[clamp(2rem,4vw,3rem)] leading-tight font-bold tracking-tight;
+}
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full px-7 py-3 font-bold transition duration-200;
+}
+@utility btn-primary {
+  @apply btn bg-lime text-escuro hover:bg-offwhite;
+}
+@utility btn-outline {
+  @apply btn border border-offwhite/35 font-light text-offwhite hover:border-lime hover:text-lime;
+}
+@utility campo {
+  @apply min-h-12 w-full rounded-xl border border-offwhite/25 bg-petroleo px-4 py-3 text-base text-offwhite placeholder:text-offwhite/50 focus:border-lime focus:outline-none;
+}
+
+/* ===== Animações de entrada (ativadas pelo main.js) ===== */
+.js .reveal,
+.js .reveal-left,
+.js .reveal-right,
+.js .reveal-scale {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js .reveal { transform: translateY(32px); }
+.js .reveal-left { transform: translateX(-40px); }
+.js .reveal-right { transform: translateX(40px); }
+.js .reveal-scale { transform: scale(0.94); }
+
+.js .visible {
+  opacity: 1;
+  transform: none;
+}
+
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal,
+  .js .reveal-left,
+  .js .reveal-right,
+  .js .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

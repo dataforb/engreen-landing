@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engreen | Engenharia Civil Sustentável</title>
+  <meta name="description" content="Projeto, execução, retrofit e vistoria de imóveis com foco em sustentabilidade, economia e segurança técnica.">
+  <meta name="theme-color" content="#0b1e26">
+
+  <!-- Open Graph (prévia ao compartilhar no WhatsApp/redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Engreen">
+  <meta property="og:title" content="Engreen | Engenharia Civil Sustentável">
+  <meta property="og:description" content="Obras mais inteligentes, do projeto à entrega.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Satoshi-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Ativa as animações só quando há JavaScript (sem JS, tudo aparece normalmente) -->
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-lime focus:px-5 focus:py-3 focus:font-bold focus:text-escuro">Pular para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-offwhite/10 bg-escuro/90 backdrop-blur transition-shadow">
+    <div class="container-site flex h-20 items-center justify-between gap-6">
+      <a href="#home" aria-label="Engreen — início" class="shrink-0">
+        <img src="assets/logo/engreen-logo-escuro.svg" alt="engreen" width="160" height="34" class="h-8 w-auto">
+      </a>
+
+      <nav aria-label="Principal" class="hidden items-center gap-8 text-base md:flex">
+        <a href="#servicos" class="nav-link text-offwhite transition hover:text-lime">Serviços</a>
+        <a href="#metodo" class="nav-link text-offwhite transition hover:text-lime">Método</a>
+        <a href="#projetos" class="nav-link text-offwhite transition hover:text-lime">Projetos</a>
+        <a href="#conteudo" class="nav-link text-offwhite transition hover:text-lime">Conteúdo</a>
+        <a href="#contato" class="btn-primary min-h-11 px-5 py-2 text-base">Fale conosco</a>
+      </nav>
+
+      <button id="menu-toggle" type="button" class="flex size-11 items-center justify-center rounded-full text-offwhite md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg class="icon-open size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="menu-mobile" aria-label="Menu mobile" class="hidden border-t border-offwhite/10 bg-escuro md:hidden">
+      <div class="container-site flex flex-col gap-1 py-4 text-lg">
+        <a href="#servicos" class="py-3 text-offwhite">Serviços</a>
+        <a href="#metodo" class="py-3 text-offwhite">Método</a>
+        <a href="#projetos" class="py-3 text-offwhite">Projetos</a>
+        <a href="#conteudo" class="py-3 text-offwhite">Conteúdo</a>
+        <a href="#contato" class="btn-primary mt-3">Fale conosco</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="bg-escuro pt-36 pb-24 lg:pt-40">
+      <div class="container-site">
+        <div class="flex flex-col items-center gap-12 lg:flex-row">
+          <div class="reveal-left flex flex-1 flex-col gap-6">
+            <p class="eyebrow text-lime">Engenharia civil sustentável</p>
+            <h1 class="text-[clamp(2.5rem,5.4vw,4.25rem)] leading-[1.05] font-bold tracking-tight">
+              Obras mais inteligentes, <span class="text-lime">do projeto à entrega.</span>
+            </h1>
+            <p class="max-w-xl text-[1.2rem] text-offwhite/80">
+              Projetamos, executamos e vistoriamos obras com foco em sustentabilidade, economia e segurança técnica, para que cada decisão proteja o seu investimento e o meio ambiente.
+            </p>
+            <div class="mt-2 flex flex-wrap gap-3">
+              <a href="#contato" class="btn-primary">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7L4 20z"/></svg>
+                Conversar sobre a minha obra
+              </a>
+              <a href="#servicos" class="btn-outline">Ver serviços</a>
+            </div>
+          </div>
+
+          <div class="reveal-right flex flex-1 justify-center">
+            <img src="assets/img/hero.jpg" alt="Colagem com edifício, turbina eólica, grua e painéis solares sobre um círculo verde" width="860" height="710" class="h-auto w-full max-w-[560px] [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_72%)]" fetchpriority="high">
+          </div>
+        </div>
+
+        <!-- Pilares -->
+        <div class="reveal mt-14 grid overflow-hidden rounded-2xl bg-offwhite text-escuro md:grid-cols-3">
+          <div class="flex flex-col gap-2 border-b border-escuro/10 p-8 md:border-r md:border-b-0">
+            <span class="text-sm font-bold text-verde">01</span>
+            <h3 class="text-[1.375rem] font-bold">Sustentável</h3>
+            <p class="text-base text-petroleo">Materiais e soluções que reduzem impacto e custo ao longo da vida útil da obra.</p>
+          </div>
+          <div class="flex flex-col gap-2 border-b border-escuro/10 p-8 md:border-r md:border-b-0">
+            <span class="text-sm font-bold text-verde">02</span>
+            <h3 class="text-[1.375rem] font-bold">Econômica</h3>
+            <p class="text-base text-petroleo">Planejamento técnico que evita desperdício, retrabalho e surpresas no orçamento.</p>
+          </div>
+          <div class="flex flex-col gap-2 p-8">
+            <span class="text-sm font-bold text-verde">03</span>
+            <h3 class="text-[1.375rem] font-bold">Segura</h3>
+            <p class="text-base text-petroleo">Laudos e vistorias que dão clareza antes de comprar ou receber um imóvel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section id="servicos" class="bg-offwhite py-24 text-escuro lg:py-28">
+      <div class="container-site flex flex-col gap-14">
+        <div class="reveal flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="flex flex-col gap-4">
+            <p class="eyebrow text-verde">Serviços</p>
+            <h2 class="titulo-secao">Engenharia que pensa no futuro</h2>
+          </div>
+          <p class="max-w-md text-petroleo">Do terreno vazio ao imóvel pronto, acompanhamos cada etapa com responsabilidade técnica e ambiental.</p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal flex flex-col gap-4 rounded-2xl bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-escuro/5">
+            <div class="flex size-13 items-center justify-center rounded-xl bg-verde text-lime">
+              <svg class="size-6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l7-7"/></svg>
+            </div>
+            <h3 class="text-[1.375rem] leading-snug font-bold">Construções sustentáveis</h3>
+            <p class="text-base text-petroleo">Projeto e execução de obras com materiais e sistemas que unem eficiência, conforto e menor impacto ambiental.</p>
+          </article>
+
+          <article class="reveal delay-1 flex flex-col gap-4 rounded-2xl bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-escuro/5">
+            <div class="flex size-13 items-center justify-center rounded-xl bg-verde text-lime">
+              <svg class="size-6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-4"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.9 4"/><path d="M20 20v-4h-4"/></svg>
+            </div>
+            <h3 class="text-[1.375rem] leading-snug font-bold">Retrofit</h3>
+            <p class="text-base text-petroleo">Transforme o velho em novo: modernização de edificações existentes de forma sustentável e econômica.</p>
+          </article>
+
+          <article class="reveal delay-2 flex flex-col gap-4 rounded-2xl bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-escuro/5">
+            <div class="flex size-13 items-center justify-center rounded-xl bg-verde text-lime">
+              <svg class="size-6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
+            </div>
+            <h3 class="text-[1.375rem] leading-snug font-bold">Vistoria de imóveis</h3>
+            <p class="text-base text-petroleo">Inspeção técnica antes da compra ou do recebimento das chaves, com relatório claro do que foi encontrado.</p>
+          </article>
+
+          <article class="reveal delay-3 flex flex-col gap-4 rounded-2xl bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-escuro/5">
+            <div class="flex size-13 items-center justify-center rounded-xl bg-verde text-lime">
+              <svg class="size-6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+            </div>
+            <h3 class="text-[1.375rem] leading-snug font-bold">Consultoria em materiais</h3>
+            <p class="text-base text-petroleo">Análise de custo e desempenho para escolher materiais sustentáveis sem encarecer a obra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MÉTODO ===================== -->
+    <section id="metodo" class="bg-petroleo py-24 lg:py-28">
+      <div class="container-site flex flex-col gap-14">
+        <div class="reveal flex max-w-2xl flex-col gap-4">
+          <p class="eyebrow text-lime">Método</p>
+          <h2 class="titulo-secao">Como trabalhamos</h2>
+          <p class="text-offwhite/80">Um processo claro, com você acompanhando cada decisão técnica e financeira.</p>
+        </div>
+
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal flex flex-col gap-3 border-t-2 border-lime py-7 pr-7">
+            <span class="text-[2.75rem] leading-none font-bold text-lime">01</span>
+            <h3 class="text-[1.375rem] font-bold">Diagnóstico</h3>
+            <p class="text-base text-offwhite/80">Entendemos o terreno, o imóvel e os seus objetivos antes de qualquer proposta.</p>
+          </li>
+          <li class="reveal delay-1 flex flex-col gap-3 border-t-2 border-lime/40 py-7 pr-7">
+            <span class="text-[2.75rem] leading-none font-bold text-lime">02</span>
+            <h3 class="text-[1.375rem] font-bold">Planejamento</h3>
+            <p class="text-base text-offwhite/80">Projeto, orçamento e cronograma definidos com transparência.</p>
+          </li>
+          <li class="reveal delay-2 flex flex-col gap-3 border-t-2 border-lime/40 py-7 pr-7">
+            <span class="text-[2.75rem] leading-none font-bold text-lime">03</span>
+            <h3 class="text-[1.375rem] font-bold">Execução</h3>
+            <p class="text-base text-offwhite/80">Acompanhamento técnico em obra, com controle de qualidade e de custos.</p>
+          </li>
+          <li class="reveal delay-3 flex flex-col gap-3 border-t-2 border-lime/40 py-7 pr-7">
+            <span class="text-[2.75rem] leading-none font-bold text-lime">04</span>
+            <h3 class="text-[1.375rem] font-bold">Entrega</h3>
+            <p class="text-base text-offwhite/80">Vistoria final e documentação completa para você receber a obra com segurança.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <!-- Para trocar um placeholder por foto: substitua a <div> "[FOTO DO PROJETO]" por
+         <img src="assets/img/projetos/nome.jpg" alt="..." class="aspect-[4/3] w-full rounded-2xl object-cover"> -->
+    <section id="projetos" class="bg-offwhite py-24 text-escuro lg:py-28">
+      <div class="container-site flex flex-col gap-12">
+        <div class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div class="flex flex-col gap-4">
+            <p class="eyebrow text-verde">Projetos</p>
+            <h2 class="titulo-secao">Obras em destaque</h2>
+          </div>
+          <a href="#projetos" class="inline-flex min-h-11 items-center gap-2 font-bold text-verde transition hover:gap-3">
+            Ver todos os projetos
+            <svg class="size-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="reveal group flex flex-col gap-4">
+            <div class="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-musgo text-[0.95rem] font-bold tracking-wide text-offwhite">[FOTO DO PROJETO]</div>
+            <div class="flex flex-col gap-1">
+              <span class="eyebrow text-[0.8rem] text-verde">Residencial</span>
+              <h3 class="text-[1.375rem] font-bold">[NOME DO PROJETO]</h3>
+              <p class="text-base text-petroleo">[CIDADE – UF]</p>
+            </div>
+          </article>
+          <article class="reveal delay-1 group flex flex-col gap-4">
+            <div class="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-petroleo text-[0.95rem] font-bold tracking-wide text-offwhite">[FOTO DO PROJETO]</div>
+            <div class="flex flex-col gap-1">
+              <span class="eyebrow text-[0.8rem] text-verde">Retrofit</span>
+              <h3 class="text-[1.375rem] font-bold">[NOME DO PROJETO]</h3>
+              <p class="text-base text-petroleo">[CIDADE – UF]</p>
+            </div>
+          </article>
+          <article class="reveal delay-2 group flex flex-col gap-4">
+            <div class="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-verde text-[0.95rem] font-bold tracking-wide text-offwhite">[FOTO DO PROJETO]</div>
+            <div class="flex flex-col gap-1">
+              <span class="eyebrow text-[0.8rem] text-verde">Vistoria</span>
+              <h3 class="text-[1.375rem] font-bold">[NOME DO PROJETO]</h3>
+              <p class="text-base text-petroleo">[CIDADE – UF]</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTEÚDO / INSTAGRAM ===================== -->
+    <section id="conteudo" class="bg-escuro py-24 lg:py-28">
+      <div class="container-site flex flex-col gap-12">
+        <div class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div class="flex max-w-2xl flex-col gap-4">
+            <p class="eyebrow text-lime">Conteúdo</p>
+            <h2 class="titulo-secao">Acompanhe no Instagram</h2>
+            <p class="text-offwhite/80">Dicas sobre construção sustentável, retrofit e vistoria de imóveis.</p>
+          </div>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="btn border border-lime font-bold text-lime hover:bg-lime hover:text-escuro">@[SEU_INSTAGRAM]</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-construcoes-sustentaveis.jpg" alt="Post: Construções sustentáveis — o futuro que começa hoje" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale delay-1 block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-materiais-sustentaveis.jpg" alt="Post: Materiais sustentáveis encarecem a obra?" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale delay-2 block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-entrega-chaves.jpg" alt="Post: Por que contratar um engenheiro antes de receber as chaves do seu novo imóvel?" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-vistoria-compra.jpg" alt="Post: Por que contratar um engenheiro para vistoriar o imóvel antes da compra?" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale delay-1 block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-retrofit.jpg" alt="Post: Retrofit — transforme o velho em novo de forma sustentável e econômica" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="reveal-scale delay-2 block overflow-hidden rounded-2xl">
+            <img src="assets/img/post-materiais-sustentaveis-claro.jpg" alt="Post: Materiais sustentáveis encarecem a obra? (versão clara)" width="720" height="900" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-105">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="bg-lime py-24 text-escuro lg:py-28">
+      <div class="container-site flex flex-col items-start gap-12 lg:flex-row">
+        <div class="reveal-left flex flex-1 flex-col gap-5">
+          <p class="eyebrow text-verde">Contato</p>
+          <h2 class="text-[clamp(2.125rem,4.4vw,3.5rem)] leading-[1.05] font-bold tracking-tight">Vamos conversar sobre a sua obra?</h2>
+          <p class="max-w-md text-[1.2rem]">Conte o que você precisa. Respondemos com os próximos passos e, se fizer sentido, agendamos uma visita técnica.</p>
+
+          <ul class="mt-3 flex flex-col gap-3 text-[1.05rem]">
+            <li>
+              <a href="https://wa.me/" data-whatsapp class="inline-flex items-center gap-3 hover:underline">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7L4 20z"/></svg>
+                [WHATSAPP (00) 00000-0000]
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@exemplo.com.br" class="inline-flex items-center gap-3 hover:underline">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                [SEU E-MAIL]
+              </a>
+            </li>
+            <li class="inline-flex items-center gap-3">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              [CIDADE – UF]
+            </li>
+          </ul>
+        </div>
+
+        <!-- O formulário abre o WhatsApp com a mensagem pronta (não precisa de servidor) -->
+        <form id="form-contato" class="reveal-right flex w-full flex-1 flex-col gap-5 rounded-3xl bg-escuro p-8 text-offwhite sm:p-10" novalidate>
+          <div class="flex flex-col gap-2">
+            <label for="f-nome" class="text-[0.95rem] font-bold">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required class="campo">
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="f-whats" class="text-[0.95rem] font-bold">WhatsApp</label>
+            <input id="f-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required class="campo">
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="f-servico" class="text-[0.95rem] font-bold">Serviço de interesse</label>
+            <select id="f-servico" name="servico" class="campo">
+              <option>Construção sustentável</option>
+              <option>Retrofit</option>
+              <option>Vistoria de imóvel</option>
+              <option>Consultoria em materiais</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="f-msg" class="text-[0.95rem] font-bold">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="4" placeholder="Conte um pouco sobre a sua obra" class="campo resize-y"></textarea>
+          </div>
+          <p id="form-erro" class="hidden text-[0.95rem] text-lime" role="alert">Preencha seu nome e WhatsApp para continuar.</p>
+          <button type="submit" class="btn-primary mt-1 cursor-pointer text-[1.05rem]">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="bg-escuro pt-16 pb-10">
+    <div class="container-site flex flex-col gap-10">
+      <div class="flex flex-col justify-between gap-8 md:flex-row">
+        <div class="flex max-w-sm flex-col gap-4">
+          <img src="assets/logo/engreen-logo-escuro.svg" alt="engreen" width="170" height="36" class="h-9 w-auto self-start" loading="lazy">
+          <p class="text-base text-offwhite/70">Engenharia civil sustentável: projeto, execução, retrofit e vistoria de imóveis.</p>
+        </div>
+        <nav aria-label="Rodapé" class="flex flex-wrap gap-x-8 gap-y-3 text-base">
+          <a href="#servicos" class="text-offwhite hover:text-lime">Serviços</a>
+          <a href="#metodo" class="text-offwhite hover:text-lime">Método</a>
+          <a href="#projetos" class="text-offwhite hover:text-lime">Projetos</a>
+          <a href="https://www.instagram.com/" data-instagram target="_blank" rel="noopener" class="text-offwhite hover:text-lime">Instagram</a>
+          <a href="#contato" class="text-offwhite hover:text-lime">Contato</a>
+        </nav>
+      </div>
+      <div class="flex flex-col justify-between gap-3 border-t border-offwhite/10 pt-6 text-sm text-offwhite/60 sm:flex-row">
+        <span>© <span id="ano">2026</span> Engreen. Todos os direitos reservados.</span>
+        <span>[CNPJ 00.000.000/0000-00]</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/" data-whatsapp target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp" class="fixed right-5 bottom-5 z-30 flex size-15 items-center justify-center rounded-full bg-lime text-escuro shadow-lg shadow-escuro/40 transition hover:scale-110 sm:right-6 sm:bottom-6">
+    <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7L4 20z"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
