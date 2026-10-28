@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* O Tailwind procura classes nestes arquivos */
-@source "../public/**/*.html";
-@source "../public/js/**/*.js";
+@source "../docs/**/*.html";
+@source "../docs/js/**/*.js";
 
 /* ===== Identidade visual Engreen ===== */
 @theme {
